@@ -28,7 +28,7 @@ def create_parse_list(chat):
 def creat_table(list):  # need adjustments
     """create a table,to sort messages"""
 
-    conn = sqlite3.connect('MeSG.sqlite')
+    conn = sqlite3.connect('p.sqlite')
     cur = conn.cursor()
 
     cur.executescript('DROP TABLE IF EXISTS Messages')
@@ -59,7 +59,7 @@ def creat_table(list):  # need adjustments
     sqlstr = 'SELECT id, date, time, author, content FROM Messages ORDER BY id DESC LIMIT 10'
 
     for row in cur.execute(sqlstr):
-        print(str(row[0]), row[1], row[2], row[3], row[4])
+        print(str(row[0], row[1], row[2], row[3], row[4]))
 
     cur.close()
 
